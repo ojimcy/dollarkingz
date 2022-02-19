@@ -22,6 +22,9 @@ app.get('/', (req, res) => {
     res.render("index")
 })
 
+
+app.get('/dashboard', (req, res) => res.render('dashboard', { layout: 'dashboard'}))
+
 const PORT = process.env.PORT || 8080
 
 app.listen(PORT, console.log(`Server started on ${PORT}`))
